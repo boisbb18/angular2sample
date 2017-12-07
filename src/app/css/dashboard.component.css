@@ -1,0 +1,12 @@
+.test {
+	margin: auto;
+	position: relative;
+	text-align: center;
+	z-index: 2;
+}
+
+.center-text {
+	margin: auto;
+	position: relative;
+	text-align: center;
+}

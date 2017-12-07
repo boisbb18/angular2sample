@@ -1,0 +1,85 @@
+.example-container {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.example-events {
+  width: 300px;
+  height: 200px;
+  overflow: auto;
+  border: 2px solid #555;
+}
+
+.sidenav-container {
+  background-color: #111;
+  width: 275px;
+  color: #818181;
+}
+.sidenav-container a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+.open_sidebar {
+	display: block;
+    font-size: 30px;
+    cursor: pointer;
+    margin-left: 30px;
+}
+
+.list {
+	color:white;
+	margin-left: 15px;
+	text-decoration: none;
+    font-size: 20px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+
+}
+.test {
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+	background: white;
+}
+
+.header {
+	text-align: center;
+	 font-size: 30px;
+}
+.workflow {
+    font-size: 25px;
+    color: #818181;
+}
+
+.image {
+	margin: auto;
+  text-align: center;
+	height:200px;
+	width: 200px;
+  padding-bottom: 10px;
+	overflow: hidden;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav-container {padding-top: 15px;}
+  .sidenav-container a {font-size: 18px;}
+}

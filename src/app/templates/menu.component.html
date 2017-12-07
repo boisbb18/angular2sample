@@ -1,0 +1,39 @@
+  <mat-sidenav-container class="example-container">
+      <mat-sidenav #sidenav mode="side" class="sidenav-container" >
+ <a href="javascript:void(0)" class="closebtn" (click)="sidenav.toggle()">&times;</a>
+      <h2 class="header">Symbiotries</h2>
+      <div class="image">
+       <img src="https://media.licdn.com/mpr/mpr/shrink_200_200/AAEAAQAAAAAAAAwYAAAAJGZmMDMyMzBiLTNkMDEtNGEzOC04YjNkLTM1NmRlZGYzYTg2Zg.png" class="md-card-image" alt="image caption">
+      </div>
+      <a routerLink="/dashboard">Dashboard</a>
+      <a routerLink="/reports">Reports</a>
+      <a routerLink="/documents">Documents</a>
+      <mat-nav-list *ngIf="workflows">
+          <mat-list-item class="list">
+            <a matLine routerLink="/make">Make</a>
+            <a matLine routerLink="/spend">Spend</a>
+            <a matLine routerLink="/bank">Bank</a>
+        </mat-list-item>
+      </mat-nav-list>
+
+   <mat-expansion-panel>
+    <mat-expansion-panel-header>
+      <mat-panel-title class="workflow">
+        Work Flows
+      </mat-panel-title>
+    </mat-expansion-panel-header>
+
+      <mat-nav-list>
+          <mat-list-item class="list">
+            <a matLine routerLink="/make">Make</a>
+            <a matLine routerLink="/spend">Spend</a>
+            <a matLine routerLink="/bank">Bank</a>
+        </mat-list-item>
+      </mat-nav-list>
+  </mat-expansion-panel>
+      </mat-sidenav>
+
+      <mat-sidenav-content>
+        <div class="open_sidebar" (click)="sidenav.toggle()">&#9776;</div>
+      </mat-sidenav-content>
+  </mat-sidenav-container>
