@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-
+import { Component, ViewChild } from '@angular/core';
+//import {SharedService} from './shared.service';
 @Component({
 	selector: 'sidebar',
 	templateUrl: './templates/menu.component.html',
@@ -7,15 +7,18 @@ import { Component } from '@angular/core';
 })
 
 export class MenuBar {
+	@ViewChild('sidenav') nav;
 	pressed: boolean = false;
 	titles: string[];
 	links: string[];
 	workflows:boolean = false;
-	constructor() {
-		this.titles = ["Dashboard","Reports","Documents", "Work Flows"];
-		this.links = ["/dashboard","/reports","/documents","/work-flows"];
+    constructor() {
+     // this.ss = ss;
+    }
 
-	}
+    openSideNav() {
+    	this.nav.opened = true;
+    }
 
 	openOpt() {
 		console.log('Open works');

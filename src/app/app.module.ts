@@ -13,8 +13,11 @@ import { WorkFlows } from './workflows.component';
 import { Make } from './make.component';
 import { Spend } from './spend.component';
 import { Bank } from './bank.component';
-import {  MatSidenavModule, MatCheckboxModule, MatListModule, MatGridListModule,  MatExpansionModule, MatButtonModule } from '@angular/material';
+import {  MatSidenavModule, MatCheckboxModule, MatListModule, MatGridListModule,  MatExpansionModule, MatButtonModule,   MatInputModule } from '@angular/material';
 import { MdCardModule } from '@angular2-material/card';
+import { ChartsModule } from 'ng2-charts';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { Login } from './login.component';
 const appRoutes: Routes = [
 	{ path: '', pathMatch:'full', redirectTo:'dashboard'},
 	{ path: 'dashboard', component: Dashboard},
@@ -23,18 +26,19 @@ const appRoutes: Routes = [
 	{ path: 'work-flows', component: WorkFlows},
   { path: 'spend', component: Spend} ,
   { path: 'bank', component: Bank },
-  { path: 'make', component: Make} 
+  { path: 'make', component: Make} ,
+  { path: 'login', component: Login}
 
 ]
-
 @NgModule({
   exports: [ MatSidenavModule],
   declarations: [
-    AppComponent, MenuBar, Dashboard, Documents, Reports, WorkFlows, Spend, Make, Bank
+    AppComponent, MenuBar, Dashboard, Documents, Reports, WorkFlows, Spend, Make, Bank,Login
   ],
   imports: [
     BrowserModule,
     HttpModule,
+    FormsModule,
     BrowserAnimationsModule,
     RouterModule.forRoot(appRoutes),
     MatSidenavModule,
@@ -43,7 +47,10 @@ const appRoutes: Routes = [
     MdCardModule,
     MatGridListModule,
     MatExpansionModule,
-    MatButtonModule
+    MatButtonModule,
+    ChartsModule,
+    MatInputModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent, MenuBar]

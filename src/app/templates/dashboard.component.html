@@ -1,4 +1,4 @@
-	<div>
+<!-- 	<div>
   <div class="center-text"> 
 		It is a Dashboard page
 	</div>
@@ -14,3 +14,32 @@
 	<div class="test"> 
   	<button (click)="handleClick()">Primary</button>
 	</div>
+ -->
+<div class="dasboard-body" [style.z-index]="visible">
+  <div  class="charts">
+    <div >
+      <canvas baseChart
+              [title]="Symbiotries"
+              [datasets]="barChartData"
+              [labels]="barChartLabels"
+              [options]="barChartOptions"
+              [legend]="barChartLegend"
+              [chartType]="barChartType"
+              (chartHover)="chartHovered($event)"
+              (chartClick)="chartClicked($event)"></canvas>
+    </div>
+    <button (click)="randomize()">Update</button>
+  </div>
+  <br />
+<div>
+  <form class="example-form">
+  <mat-form-field class="example-full-width">
+    <input matInput placeholder="Favorite food" value="Sushi">
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width">
+    <textarea matInput placeholder="Leave a comment"></textarea>
+  </mat-form-field>
+</form>
+</div>
+</div>

@@ -10,3 +10,30 @@
 	position: relative;
 	text-align: center;
 }
+
+.dasboard-body {
+/*	position: relative;
+	z-index: 1;*/
+	margin: 50px;
+}
+
+.charts {
+	margin-left: 100px;
+	background: white;
+	width: 600px;
+	height: 340px;
+}
+
+/*.test {
+	background: lightgray;
+}*/
+
+.example-form {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+}
+
+.example-full-width {
+  width: 100%;
+}
