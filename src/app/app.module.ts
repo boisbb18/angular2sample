@@ -13,13 +13,14 @@ import { WorkFlows } from './workflows.component';
 import { Make } from './make.component';
 import { Spend } from './spend.component';
 import { Bank } from './bank.component';
-import {  MatSidenavModule, MatCheckboxModule, MatListModule, MatGridListModule,  MatExpansionModule, MatButtonModule,   MatInputModule } from '@angular/material';
+import {  MatSidenavModule, MatCheckboxModule, MatListModule, MatGridListModule,  MatExpansionModule, MatButtonModule, MatFormFieldControl} from '@angular/material';
+import { MatFormFieldModule, MatInputModule } from '@angular/material';
 import { MdCardModule } from '@angular2-material/card';
 import { ChartsModule } from 'ng2-charts';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { Login } from './login.component';
 const appRoutes: Routes = [
-	{ path: '', pathMatch:'full', redirectTo:'dashboard'},
+	{ path: '', pathMatch:'full', redirectTo:'login'},
 	{ path: 'dashboard', component: Dashboard},
 	{ path: 'reports', component: Reports},
 	{ path: 'documents', component: Documents },
@@ -38,9 +39,9 @@ const appRoutes: Routes = [
   imports: [
     BrowserModule,
     HttpModule,
+    RouterModule.forRoot(appRoutes),
     FormsModule,
     BrowserAnimationsModule,
-    RouterModule.forRoot(appRoutes),
     MatSidenavModule,
     MatCheckboxModule,
     MatListModule,
@@ -50,7 +51,8 @@ const appRoutes: Routes = [
     MatButtonModule,
     ChartsModule,
     MatInputModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatFormFieldModule
   ],
   providers: [],
   bootstrap: [AppComponent, MenuBar]

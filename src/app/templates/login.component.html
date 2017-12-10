@@ -1,10 +1,9 @@
-<div class="center-text"> Login Page </div>
 
-<!-- <form class="example-form">
-  <mat-form-field class="example-full-width">
+<h2 class="center-text"> Login Page </h2>
+<form class="example-form">
+  <mat-form-field class="full-width">
     <input matInput placeholder="Email" [formControl]="emailFormControl"
            [errorStateMatcher]="matcher">
-    <mat-hint>Errors appear instantly!</mat-hint>
     <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
       Please enter a valid email address
     </mat-error>
@@ -12,16 +11,12 @@
       Email is <strong>required</strong>
     </mat-error>
   </mat-form-field>
+  <mat-form-field class="full-width">
+    <input matInput type="Password" placeholder="Password">
+  </mat-form-field>
+  <button mat-raised-button color="green" class="button"> Log In</button>
 </form>
- -->
-
- <div class="example-container">
-  <mat-form-field>
-    <input matInput placeholder="Input">
-  </mat-form-field>
-
-  <mat-form-field>
-    <textarea matInput placeholder="Textarea"></textarea>
-  </mat-form-field>
-
+<br />
+<div class="center">
+  <button mat-raised-button color="primary"> Sign Up</button>
 </div>

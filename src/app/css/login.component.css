@@ -1,20 +1,29 @@
-/*.example-form {
+
+.center-text {
+  margin: 5% auto;
+  text-align: center;
+}
+/*.mat-button, .mat-fab, .mat-icon-button, .mat-mini-fab, .mat-raised-button {
+}*/
+.button {
+  background: #9ACD32;
+}
+.example-form {
   min-width: 150px;
   max-width: 500px;
+  text-align: center;
+  margin:auto;
+}
+
+.full-width {
   width: 100%;
 }
 
-.example-full-width {
-  width: 100%;
-}
-*/
-.example-container {
-  display: flex;
-  flex-direction: column;
+.test {
   text-align: center;
   margin: auto;
 }
 
-.example-container > * {
-  width: 100%;
+.center {
+  text-align: center;
 }
